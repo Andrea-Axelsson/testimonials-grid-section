@@ -1,0 +1,151 @@
+
+html{
+    box-sizing: border-box;
+    font-family: Barlow Semi Condensed;
+}
+
+body{
+    background: #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;    
+}
+
+/* GRID */
+
+.card-container{
+    width: 90%;
+    max-width: 1300px;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "purple purple grey white1"
+    "white2 blue blue white1"
+}
+
+@media (max-width: 1000px) {
+    .card-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+    "purple grey"
+    "white1 blue"
+    "white2 ..."
+    }
+  }
+
+  @media (max-width: 600px) {
+    .card-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+    "purple"
+    "grey"
+    "white1"
+    "blue"
+    "white2"
+    }
+  }
+
+.purple{
+    grid-area: purple;
+}
+
+.grey{
+    grid-area: grey;
+}
+
+.white1{
+    grid-area: white1;
+}
+
+.white2{
+    grid-area: white2;
+}
+
+.blue{
+    grid-area: blue;
+}
+
+/* LAYOUT */
+
+.card{
+    border-radius: 8px;
+    box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+    padding: 2em;
+}
+
+.card_profile-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card__profile-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.0625em;
+    
+}
+
+.card__profile-img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card--purple{
+    background: #733FC8;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="104" height="102" viewBox="0 0 104 102"><path d="M104 102V59.727H84.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C95.01 25.86 98.909 22.257 104 19.375V0c-9.758 4.27-17.712 9.874-23.864 16.813-6.151 6.939-10.712 14.545-13.681 22.818C63.485 47.904 62 59.941 62 75.74V102h42zm-62 0V59.727H22.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C33.01 25.86 36.909 22.257 42 19.375V0c-9.652 4.27-17.58 9.874-23.784 16.813C12.01 23.752 7.424 31.358 4.455 39.631 1.485 47.904 0 59.941 0 75.74V102h42z" fill="%23A775F1" fill-rule="nonzero"/></svg>');
+    background-size: 104px;
+    background-position: 75% 0%;
+    background-repeat: no-repeat;
+}
+
+.card--grey{
+    background: #48556A;  
+}
+
+.card--white{
+    background: #FFF;
+}
+
+.card--blue{
+    background: #19202D; 
+}
+
+/* TEXT */
+
+.card--white-text{
+   color: #fff; 
+}
+
+.card--dark-text{
+    color: #48556A;  
+}
+
+.card__person-name-text{
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.card__graduate-text{
+    font-size: 0.6875rem;
+    font-weight: 500;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.card__big-quote{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card__body-text{
+    font-size: 0.8125rem;
+    font-weight: 500;
+    opacity: 0.7;
+}
